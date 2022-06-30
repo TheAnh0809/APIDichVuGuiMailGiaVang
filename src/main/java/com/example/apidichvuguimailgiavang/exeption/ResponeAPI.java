@@ -2,6 +2,8 @@ package com.example.apidichvuguimailgiavang.exeption;
 
 import org.springframework.http.HttpStatus;
 
+import java.util.LinkedHashMap;
+
 public class ResponeAPI {
 
     private Integer status;
@@ -37,7 +39,10 @@ public class ResponeAPI {
     public void setError(Object error) {
         this.error = error;
     }
-
+    public void setDataFromJson(LinkedHashMap<String, Object> map){
+        this.setData(map.get("data"));
+        this.setError(map.get("error"));
+    }
     @Override
     public String toString() {
         return "ResponeAPI{" +

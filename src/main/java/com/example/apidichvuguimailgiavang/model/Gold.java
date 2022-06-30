@@ -6,18 +6,18 @@ import java.util.LinkedHashMap;
 
 @Data
 public class Gold {
-    private String loai;
-    private String khuVuc;
-    private String giaMua;
-    private String giaBan;
-    private String ngay;
+    private String metal;
+    private String currency;
+    private double price;
+    private double ch;
+    private double chp;
 
     public Gold toGold(LinkedHashMap<String, Object> data){
-        this.loai = (String) data.get("loai");
-        this.khuVuc = (String) data.get("khuvuc");
-        this.giaBan = (String) data.get("giaBan");
-        this.giaMua = (String) data.get("giaMua");
-        this.ngay = (String) data.get("ngay");
+        this.metal = (String) data.get("metal");
+        this.currency = (String) data.get("currency");
+        this.price = (double) data.get("price");
+        this.ch = (double) data.get("ch");
+        this.chp = (double) data.get("chp");
         return this;
     }
 }

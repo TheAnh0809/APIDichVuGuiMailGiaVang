@@ -23,11 +23,25 @@ public class User {
     @Column(name = "name", nullable = false)
     private String name;
 
-    @Column(name = "maxacnhan", nullable = false)
-    private String maxacnhan;
-
-
+    @Column(name = "mavang", nullable = false)
+    private String mavang;
+    @Column(name = "matien", nullable = false)
+    private String matien;
+    @Column(name = "giamin", nullable = false)
+    private double giamin;
+    @Column(name = "giamax", nullable = false)
+    private double giamax;
     public User() {
 
+    }
+    public String tojson(){
+        return  "{\n" +
+                "    \"name\" : \""+this.name+"\",\n" +
+                "    \"email\":\""+this.email+"\",\n" +
+                "    \"mavang\":\""+this.mavang+"\",\n" +
+                "    \"matien\":\""+this.matien+"\",\n" +
+                "    \"giamin\" :"+this.giamin+",\n" +
+                "    \"giamax\":"+this.giamax+"\n" +
+                "}";
     }
 }
